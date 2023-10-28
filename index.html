@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./CSS/estilos.css">
+        <script src="/Js/scripts.js" type="module" defer></script>
+    <title>ABM SuperHeroes/Villanos</title>
+</head>
+<body>
+    <div class="Encabezado">
+        <h1>ABM Superheroes</h1>
+    </div>
+    <main>
+        <h2>Datos de Superheroes en el sistema</h2>
+        <fieldset class="datos">
+            <div class="parteSuperior">
+                <label for="Filtrar" style="font-size: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Filtrar por</label>
+                <select name="FiltrarPor" id="FiltrarPor">
+                    <option value="Todos">Todos</option>
+                    <option value="superheroe">SuperHeroe</option>
+                    <option value="villano">Villano</option>
+                </select>
+                <br>
+                <div class="calcular-promedio">
+                    <label for="calcularPromedio" style="font-size: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">Calcular edad promedio:</label>
+                    <input type="text" name="txtPromedio" class="txtPromedio" id="txtPromedio" readonly>
+                    <input type="button" value="Calcular" id="btnPromedio">
+                </div>                
+            </div>
+            <div class="cheks" style="font-size: 30px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); text-align: center;">
+                <label for="chkId" class="chk"style="margin-right: 20px;">Id<input type="checkbox" id="chkId" name="chk" value="chkId" checked></label>
+                <label for="chkNombre" class="chk"style="margin-right: 20px;">Nombre<input type="checkbox" id="chkNombre" name="chk" value="chkNombre" checked></label>
+                <label for="chkApellido" class="chk"style="margin-right: 20px;">Apellido<input type="checkbox" id="chkApellido" name="chk" value="chkApellido" checked></label>
+                <label for="chkEdad" class="chk"style="margin-right: 20px;">Edad<input type="checkbox" id="chkEdad" name="chk" value="chkEdad" checked></label>
+                <label for="chkAlterego" class="chk"style="margin-right: 20px;">Alterego<input type="checkbox" id="chkAlterego" name="chk" value="chkAlteregos" checked></label>
+                <label for="chkCiudad" class="chk"style="margin-right: 20px;">Ciudad<input type="checkbox" id="chkCiudad" name="chk" value="chkCiudad" checked></label>
+                <label for="chkEnemigo" class="chk"style="margin-right: 20px;">Enemigo<input type="checkbox" id="chkEnemigo" name="chk" value="chkEnemigo" checked></label>
+                <label for="chkRobos" class="chk"style="margin-right: 20px;">Robos<input type="checkbox" id="chkRobos" name="chk" value="chkRobos" checked></label>
+                <label for="chkAsesinatos" class="chk"style="margin-right: 20px;">Asesinatos<input type="checkbox" id="chkAsesinatos" name="chk" value="chkAsesinatos" checked></label>
+            </div>
+
+        </fieldset>
+        <section id="tabla">
+        </section>
+        <p id="contenedorBtnAgregar">
+            <input type="button" value="Agregar" id="btnAgregarNuevo">
+        </p>
+        <section class="Seccion-Formulario">
+            <h2 class="Titulo-Form">Completa el formulario</h2>
+            <form action="Formulario">
+                <div class="Fielset-cargar">
+                    <fieldset>
+                        <legend>Información del vehículo: </legend>
+                        <label for="id"> ID:</label>
+                        <input type="text" name="txtId" class="form-control" placeholder="Id" readonly>
+                        <br>
+                        <label for="Nombre"> Nombre:</label>
+                        <input type="text" name="txtNombre" class="form-control" placeholder="Nombre" required>
+                        <br>
+                        <label for="Apellido"> Apellido:</label>
+                        <input type="text" name="txtApellido" class="form-control" placeholder="Apellido" required>
+                        <br>
+                        <label for="anoFab"> Edad:</label>
+                        <select name="txtEdad" id="txtEdad">Edad</select>
+                        <br>
+                        <label for="tipo" class="form-label"> Tipo:</label>
+                        <select name="tipo" id="tipo"></select> 
+                        <div id="errorMensaje" style="display: none;  text-shadow: none; font-weight: bold; font-size: 13px;color: rgb(255, 0, 0);">
+                            Debe seleccionar qué tipo persona desea cargar.</div>
+                        <fieldset id="camposSegunTipo" class="camposSegunTipo">
+                        </fieldset>
+                        <p class="botonesABM">
+                            <input type="submit" value="Agregar" id="btnAgregar">
+                            <input type="button" value="Eliminar" id="btnEliminar" disabled>
+                            <input type="button" value="Cancelar" id="btnCancelar">
+                        </p>
+                        <br>
+                        <br>
+                    </fieldset>
+                </div>
+            </form>
+        </section>
+        
+    </main>
+
+</body>
+
+</html>
